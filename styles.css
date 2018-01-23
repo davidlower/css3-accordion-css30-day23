@@ -1,0 +1,62 @@
+* {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   --p-color: #0ed487;
+   /* --a-height: 70px; */
+   height: 100%;
+
+   font-family: 'Poppins', sans-serif;
+   font-size: 16px;
+   font-weight: 200;
+}
+
+.accordion-container {
+   width: 90%;
+   max-width: 800px;
+   margin: 10% auto;
+}
+
+.accordion-title {
+   background-color: var(--p-color);
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 70px;
+   color: white;
+   border-top: solid 1px white;
+   cursor: pointer;
+   font-size: 1.6rem;
+   box-shadow: 0 1px 2px 0 grey;
+}
+
+.accordion-title i {
+   position: absolute;
+   right: 5%;
+   top: calc(50% - 0.8rem);
+}
+
+.accordion-title p {
+   position: absolute;
+   left: 5%;
+   top: 50%;
+   transform: translateY(-50%);
+   margin: 0;
+}
+
+.accordion-content {
+   width: 100%;
+   max-width: 800px;
+   height: 0;
+   font-size: 0.9rem;
+   overflow: hidden;
+}
+
+.accordion-content:target {
+   height: 15%;
+   padding: 5%;
+}
