@@ -63,16 +63,26 @@ html {
 }
 
 .accordion-content {
+   display: block;
    overflow: hidden;
 
-   width: 100%;
-   max-width: 800px;
    height: 0;
 
    font-size: 0.9rem;
+   transition: height 0.6s ease, padding 0.2s ease-in;
+
 }
 
 .accordion-content:target {
-   height: 15%;
+   height: 150px;
    padding: 5%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 550px) {
+   .accordion-content:target {
+      padding: 10%;
+      height: 220px;
+   }
 }
